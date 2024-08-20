@@ -12,7 +12,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load your pre-trained model
-model = load_model("C:/Users/prachet/OneDrive - Vidyalankar Institute of Technology/Desktop/Coding/Machine Learning/DEEP LEARNING/DL Project 2. MNIST Digit Classification with Neural Network/Proper/mnist_digit_classification_model.h5")
+model = load_model("mnist_digit_classification_model.h5")
 
 # Streamlit UI
 st.title("Handwritten Digit Recognition")
