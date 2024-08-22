@@ -4,7 +4,6 @@ from tensorflow.keras.models import load_model
 from streamlit_drawable_canvas import st_canvas
 import cv2
 
-# Load your pre-trained model
 model = load_model("mnist_digit_classification_model.h5")
 
 # Streamlit UI
