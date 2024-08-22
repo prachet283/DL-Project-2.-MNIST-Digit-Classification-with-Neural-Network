@@ -22,27 +22,20 @@ canvas_result = st_canvas(
 if st.button('Predict'):
     if canvas_result.image_data is not None:
         try:
-            # Convert canvas image to grayscale
             input_image = canvas_result.image_data.astype(np.uint8)
             grayscale = cv2.cvtColor(input_image, cv2.COLOR_BGR2GRAY)
             
-            # Resize the image to 28x28 pixels
             input_image_resize = cv2.resize(grayscale, (28,28))
             
-            # Normalize the image
             input_image_resize = input_image_resize / 255.0
             
-            # Reshape the image to match the input shape of the model
             image_reshaped = np.reshape(input_image_resize, [1, 28, 28, 1])
             
-            # Debugging: Display the preprocessed image
             st.image(input_image_resize, caption="Resized and Normalized Image", use_column_width=False, clamp=True, channels='GRAY')
             
-            # Predict the digit
             input_prediction = model.predict(image_reshaped)
             input_pred_label = np.argmax(input_prediction)
             
-            # Debugging: Display the prediction probabilities
             st.write(f"Prediction Probabilities: {input_prediction}")
             
             # Display the prediction
