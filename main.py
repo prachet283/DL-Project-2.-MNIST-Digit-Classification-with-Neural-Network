@@ -9,10 +9,10 @@ model = load_model("mnist_digit_classification_model.h5")
 st.title("Handwritten Digit Recognition")
 
 canvas_result = st_canvas(
-    fill_color="#000000",  # Black fill color
+    fill_color="#000000", 
     stroke_width=10,
-    stroke_color="#ffffff",  # White stroke color
-    background_color="#000000",  # Black background color
+    stroke_color="#ffffff",  
+    background_color="#000000", 
     height=280,
     width=280,
     drawing_mode="freedraw",
