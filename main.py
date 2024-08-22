@@ -8,7 +8,6 @@ model = load_model("mnist_digit_classification_model.h5")
 
 st.title("Handwritten Digit Recognition")
 
-# Create a canvas component with black background and white stroke
 canvas_result = st_canvas(
     fill_color="#000000",  # Black fill color
     stroke_width=10,
