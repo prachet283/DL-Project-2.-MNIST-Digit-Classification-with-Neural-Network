@@ -6,7 +6,6 @@ import cv2
 
 model = load_model("mnist_digit_classification_model.h5")
 
-# Streamlit UI
 st.title("Handwritten Digit Recognition")
 
 # Create a canvas component with black background and white stroke
